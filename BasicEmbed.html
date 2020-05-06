@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic Embed</title>
+
+    <script src="https://online.tableau.com/javascripts/api/tableau-2.js"></script>
+    <script type="text/javascript">
+      function initViz() {
+        var containerDiv = document.getElementById("vizContainer"),
+          url =
+            "https://10ax.online.tableau.com/t/philperrindev713603/views/COVID-19CaseRateper100k/Main",
+          options = {
+            hideTabs: true,
+            onFirstInteractive: function() {
+              console.log("Here it is!");
+            }
+          };
+
+        var viz = new tableau.Viz(containerDiv, url, options);
+        // Create a viz object and embed it in the container div.
+      }
+    </script>
+  </head>
+
+  <body onload="initViz();">
+    <div id="vizContainer" style="width:800px; height:700px;"></div>
+  </body>
+</html>
