@@ -4,6 +4,7 @@
     <title>Basic Embed</title>
 
     <script src="https://online.tableau.com/javascripts/api/tableau-2.js"></script>
+    <script src='https://online.tableau.com/javascripts/api/viz_v1.js'></script>
     <script type="text/javascript">
       function initViz() {
         var containerDiv = document.getElementById("vizContainer"),
@@ -11,7 +12,7 @@
             "https://10ax.online.tableau.com/t/philperrindev713603/views/COVID-19CaseRateper100k/Main",
           options = {
             hideTabs: true,
-            embed:true,
+            embed: true,
             onFirstInteractive: function() {
               console.log("Here it is!");
             }
